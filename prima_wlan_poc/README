@@ -34,4 +34,12 @@ PoC:
 
 https://raw.githubusercontent.com/hardenedlinux/offensive_poc/master/prima_wlan_poc/wext_poc.c
 
+
+Mitigation:
+
+We haven't exmine if this issue can be exploited to gain the root
+privileges. But some fancy mitigation like PXN is not support well for
+android armv7. Porting PaX UDEREF is an another option.
+
+
 Co-worker: citypw, pray3rz
