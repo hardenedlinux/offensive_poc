@@ -1,0 +1,37 @@
+***Summary***
+
+One exploitable bug has been fixed in prima wlan driver a few months
+ago.
+
+Upstream fix:
+https://github.com/sonyxperiadev/prima/commit/4b91219ada9e73c897da2e0ae7bf2ff043dde950
+
+Cyanogenmod's backport fix:
+https://github.com/CyanogenMod/android_kernel_sony_msm8960t/commit/d58f1eacbdf55946ec7062ab6e4df462bf30ef32
+
+It was lacking a check for valid length of copy a buffer, which can be
+crafted by userspace. The application could communicate with wlan
+driver via ioctl() with 0x8bf7 to enter into vulnerable code path.
+
+This issue may leads to a local DoS or privilege escalation. Some
+android phone/tablet are still using the vulnerable version of prima
+driver. We've aware of android-msm-flo-3.4-marshmallow for Nexus 7(
+2013) is affected by this isuee:
+
+https://android.googlesource.com/kernel/msm/+/android-msm-flo-3.4-marshmallow
+
+Plz review the file:
+
+msm-kernel/drivers/staging/prima/CORE/HDD/src/wlan_hdd_wext.c
+
+
+Then we've already sent a patch to backport fix for the branch and
+still doesn't get any answer yet:
+
+https://android.googlesource.com/kernel/msm/+/15c8afebed947b30370095cbb7de6257891a3971%5E!/#F0
+
+PoC:
+
+https://raw.githubusercontent.com/hardenedlinux/offensive_poc/master/prima_wlan_poc/wext_poc.c
+
+Co-worker: citypw, pray3rz
