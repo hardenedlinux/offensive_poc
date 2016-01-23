@@ -1,6 +1,6 @@
 /*
  * Coder: Shawn the R0ck, [citypw@gmail.com]
- * Co-worker: Pray3r, [pray3rz@gmail.com]
+ * Co-worker: Pray3r, [pray3r.z@gmail.com]
  * Compile:
  * # arm-linux-androideabi-gcc wext_poc.c --sysroot=$SYS_ROOT  -pie 
  * # ./a.out wlan0
