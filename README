@@ -1,0 +1,11 @@
+Shawn the R0ck - Jan 25 2016
+
+Any exploitable bug's PoC written by Hardenedlinux community will be
+pushed here. This project is for fun and trying to give a little
+heads-up to those who don't care the real sense of security.
+
+Bug-->Exploitable bug-->*PoC*-->exploit-->weaponized/reliable exploit
+
+There are numberless bugs pops up every seconds. Just fixing them are
+not enough to solve the problem. Security mitigtaion( like
+PaX/Grsecurity) is the only way out;-)
